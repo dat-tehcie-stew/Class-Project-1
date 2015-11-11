@@ -1,34 +1,97 @@
-f1 = '''
- @<
-/ \
-'''
+require 'gosu'
 
-f2 = '''
- @-
- |
-'''
+#player class
+class player
+  def initialize()
+  #frames for player
+    1 = '''
+    @<
+   / \
+    '''
 
-f3 = '''
- @<
-/ \
-'''
+    2 = '''
+    @-
+   / \
+    '''
 
-f4 = '''
- @-
- |
-'''
+    3 = '''
+    @<
+    |
+    '''
 
-atGuy = [f1, f2, f3, f4]
-control = 0
+    4 = '''
+    @-
+    |
+    '''
 
-while true
-  system("clear")
-  puts atGuy[control]
-  if control == 3
-    control = 0
-  else
-    control += 1
+    5 = '''
+    >@
+    / \
+    '''
+
+    6 = '''
+    -@
+    / \
+    '''
+
+    7 = '''
+    >@
+     |
+    '''
+
+    8 = '''
+    -@
+     |
+    '''
+
+    @walkRightOpen = [1, 3]
+    @walkRightClosed = [2, 4]
+    @walkLeftOpen = [5, 7]
+    @walkLeftClosed = [6, 8]
+    @currentFrame = ''' '''
   end
-  puts control
-  sleep(0.2)
+
+#walk right
+  def rightWalkReg()
+
+  end
+
+  def rightWalkAttack()
+
+  end
+
+#stand right
+  def rightStandReg()
+
+  end
+
+  def rightStandAttack()
+
+  end
+
+#walk left
+  def leftWalkReg()
+
+  end
+
+  def leftWalkAttack()
+
+  end
+
+#stand left
+  def leftStandReg()
+
+  end
+
+  def leftStandAttack()
+
+  end
+end
+
+#enemy class
+class enemy
+  def initialize()
+
+  end
+
 end
