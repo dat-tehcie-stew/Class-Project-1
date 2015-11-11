@@ -1,39 +1,34 @@
-gameScreen1 = '''
---------------------------------------------------
-|                                                |
-|                         |||||||                |
-|                       |||||||||||              |
-|                         |||||||                |
-|   ()                      |||         _____    |
-|  /||\          |>         |||        /_____\   |
-|   /\           |          |||        |     |   |
---------------------------------------------------
-Get to the treasure chest...
+f1 = '''
+ @<
+/ \
 '''
 
-
-gameScreen2 = '''
---------------------------------------------------
-|                                                |
-|                         |||||||                |
-|                       |||||||||||              |
-|                         |||||||                |
-|   ()/                     |||         _____    |
-|  /||           |>         |||        /_____\   |
-|   /\           |          |||        |     |   |
---------------------------------------------------
-Get to the treasure chest...
+f2 = '''
+ @-
+ |
 '''
+
+f3 = '''
+ @<
+/ \
+'''
+
+f4 = '''
+ @-
+ |
+'''
+
+atGuy = [f1, f2, f3, f4]
 control = 0
 
 while true
-  if control % 2 == 0
-    gameScreen = gameScreen2
-  else
-    gameScreen = gameScreen1
-  end
   system("clear")
-  STDOUT.write "\r#{gameScreen}"
-  control += 1
-  sleep(1)
+  puts atGuy[control]
+  if control == 3
+    control = 0
+  else
+    control += 1
+  end
+  puts control
+  sleep(0.2)
 end
